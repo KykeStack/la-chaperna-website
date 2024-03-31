@@ -1,0 +1,26 @@
+{
+  "extends": ["@vue/tsconfig/tsconfig.dom.json", "@tsconfig/node20/tsconfig.json"],
+  "include": [
+    "ts/*.d.ts",
+    "src/**/*",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
+    "./src/**/**/*.{vue,js,ts,jsx,tsx}",
+    "vite.config.*",
+    "vitest.config.*",
+    "cypress.config.*",
+    "nightwatch.conf.*",
+    "playwright.config.*"
+  ],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "types": ["node", "@types/node"],
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}
